@@ -11,7 +11,7 @@ const useStyles = makeStyles(styles);
 
 export default props => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   function handleDrawer() {
     setOpen(!open);

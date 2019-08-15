@@ -1,0 +1,11 @@
+{
+    "title": "My Boilerplate",
+    "routes": [
+        {
+            "name": "",
+            "path": "",
+            "component": "",
+            "icon": ""
+        }
+    ]
+}

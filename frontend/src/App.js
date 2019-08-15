@@ -1,11 +1,12 @@
 import React from "react";
+import GlobalState from "./context/GlobalState";
 import Home from "./views/Home";
 
 function App() {
   return (
-    <div className="App">
+    <GlobalState>
       <Home />
-    </div>
+    </GlobalState>
   );
 }
 
