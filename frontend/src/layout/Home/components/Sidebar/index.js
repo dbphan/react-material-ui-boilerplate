@@ -1,22 +1,23 @@
 import React from "react";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { Home } from "@material-ui/icons";
+import GlobalContext from "../../../../context/GlobalContext";
 
+const iconRegistry = {
+  Home: <Home />
+};
 export default () => {
+  const { REACT_APP_CONFIG } = React.useContext(GlobalContext);
   return (
     <List>
-      {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
+      {REACT_APP_CONFIG.routes
+        .filter(el => el.name !== "Not Found")
+        .map((item, index) => (
+          <ListItem button key={index}>
+            <ListItemIcon>{iconRegistry[item.icon]}</ListItemIcon>
+            <ListItemText primary={item.name} />
+          </ListItem>
+        ))}
     </List>
   );
 };

@@ -2,10 +2,18 @@
     "title": "My Boilerplate",
     "routes": [
         {
-            "name": "",
-            "path": "",
-            "component": "",
-            "icon": ""
+            "name": "Home",
+            "path": "/",
+            "component": "Home",
+            "icon": "Home",
+            "exact": true
+        },
+        {
+            "name": "Not Found",
+            "path": "/not-found",
+            "component": "NotFound",
+            "icon": "",
+            "exact": false
         }
     ]
 }

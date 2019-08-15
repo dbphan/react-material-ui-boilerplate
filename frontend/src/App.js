@@ -1,11 +1,11 @@
 import React from "react";
 import GlobalState from "./context/GlobalState";
-import Home from "./views/Home";
+import Routes from "./Routes";
 
 function App() {
   return (
     <GlobalState>
-      <Home />
+      <Routes />
     </GlobalState>
   );
 }
