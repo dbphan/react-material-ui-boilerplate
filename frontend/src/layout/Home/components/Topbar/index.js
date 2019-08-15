@@ -31,7 +31,7 @@ export default props => {
         <Typography variant="h6" noWrap>
           {REACT_APP_CONFIG.title}
         </Typography>
-        <Button color="inherit" className={classes.button}>
+        <Button color="inherit" variant="text" className={classes.button}>
           Login
         </Button>
       </Toolbar>
