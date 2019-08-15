@@ -4,5 +4,8 @@ export default theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2)
+  },
+  button: {
+    marginLeft: "auto"
   }
 });
