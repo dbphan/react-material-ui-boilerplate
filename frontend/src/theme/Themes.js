@@ -35,6 +35,12 @@ module.exports = {
       }
     },
     typography: {
+      fontFamily: "Open Sans",
+      fontSize: 16,
+      fontWeightBold: 700,
+      fontWeightLight: 300,
+      fontWeightMedium: 500,
+      fontWeightRegular: 400,
       h1: {
         fontFamily: "Open Sans",
         fontWeight: 300,
