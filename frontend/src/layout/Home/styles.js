@@ -1,7 +1,7 @@
 import React from "react";
 import pixelWidth from "string-pixel-width";
 import GlobalContext from "../../context/GlobalContext";
-// const drawerWidth = 215;
+
 function getDrawerWidth(configs, fontFamily, fontSize) {
   {
     return (
@@ -15,10 +15,8 @@ function getDrawerWidth(configs, fontFamily, fontSize) {
             })
           );
           if (width > acc) {
-            console.log("if", cur.name, width);
             return width;
           } else {
-            console.log("else", cur.name, acc);
             return acc;
           }
         }, 0) + 78
@@ -32,7 +30,7 @@ export default theme => {
     theme.typography.fontFamily,
     theme.typography.fontSize
   );
-  console.log(drawerWidth);
+
   return {
     root: {
       display: "flex"
